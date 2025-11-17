@@ -147,3 +147,43 @@ const MONGO_URI = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?ret
 -schemas
 -validações
 -interações CRUD
+
+🧩 Descrição Detalhada das Contribuições
+Ana Lima
+
+Desenvolvimento completo das collections:
+
+Livro
+Fornecedor
+Estoque
+
+Implementação dos CRUDs e rotas correspondentes
+
+Criação de validações com Yup e Mongoose
+
+Organização das pastas de rotas, controllers, validators e models
+
+Documentação de endpoints no Postman
+
+Parte principal do README.md
+
+Resolução de issues:
+
+CRUD Livro
+
+CRUD Fornecedor
+
+CRUD Estoque
+
+Padronização das rotas
+
+Conexão com o MongoDB Atlas
+
+Membro 2
+
+(preencher depois)
+
+Membro 3
+
+(preencher depois)
+
