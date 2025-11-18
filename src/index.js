@@ -24,6 +24,17 @@ mongoose.connect(url)
 
 // rotas
 
+const FuncionarioController = require('./controllers/FuncionarioController')
+app.use(FuncionarioController)
+
+const DepartamentoController = require('./controllers/DepartamentoController')
+app.use(DepartamentoController)
+
+const PedidoController = require('./controllers/PedidoController')
+app.use(PedidoController)
+
+const CargoController = require('./controllers/CargoController')
+app.use(CargoController)
 
 app.listen(3000, () => {
     console.log("Aplicação rodando -> http://localhost:3000")
