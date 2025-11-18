@@ -29,6 +29,9 @@ app.use(ClienteController)
 const VendaController = require('./controllers/VendaController')
 app.use(VendaController)
 
+const ItemController = require('./controllers/ItemController')
+app.use(ItemController)
+
 app.listen(3000, () => {
     console.log("Aplicação rodando -> http://localhost:3000")
   })
