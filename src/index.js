@@ -26,11 +26,14 @@ mongoose.connect(url)
 const ClienteController = require('./controllers/ClienteController')
 app.use(ClienteController)
 
-const VendaController = require('./controllers/VendaController')
-app.use(VendaController)
+const FuncionarioController = require('./controllers/FuncionarioController')
+app.use(FuncionarioController)
 
-const ItemController = require('./controllers/ItemController')
-app.use(ItemController)
+const DepartamentoController = require('./controllers/DepartamentoController')
+app.use(DepartamentoController)
+
+const CargoController = require('./controllers/CargoController')
+app.use(CargoController)
 
 app.listen(3000, () => {
     console.log("Aplicação rodando -> http://localhost:3000")
