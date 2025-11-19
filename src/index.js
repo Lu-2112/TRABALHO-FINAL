@@ -23,15 +23,14 @@ mongoose.connect(url)
   })
 
 // rotas
+const ClienteController = require('./controllers/ClienteController')
+app.use(ClienteController)
 
 const FuncionarioController = require('./controllers/FuncionarioController')
 app.use(FuncionarioController)
 
 const DepartamentoController = require('./controllers/DepartamentoController')
 app.use(DepartamentoController)
-
-const PedidoController = require('./controllers/PedidoController')
-app.use(PedidoController)
 
 const CargoController = require('./controllers/CargoController')
 app.use(CargoController)
