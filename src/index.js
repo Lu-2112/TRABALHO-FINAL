@@ -22,20 +22,18 @@ mongoose.connect(url)
     console.log("Erro ao conectar no banco MongoDB: ", erro)
   })
 
-// importando as rotas
+// rotas
+const CargoController = require('./controllers/CargoController')
+app.use(CargoController);
 
-//Rotas da parte da Ana Clara
-const LivroController = require('./controllers/LivroController')
-app.use(LivroController);
+const DepartamentoController = require('./controllers/DepartamentoController')
+app.use(DepartamentoController);
 
-const EstoqueController = require('./controllers//EstoqueController')
-app.use(EstoqueController);
-
-const FornecedorController = require('./controllers/FornecedorController')
-app.use(FornecedorController);
+const FuncionarioController = require('./controllers/FuncionarioController')
+app.use(FuncionarioController)
 
 
-// Rota para rodar a aplicação
+
 app.listen(3000, () => {
     console.log("Aplicação rodando -> http://localhost:3000")
   })
