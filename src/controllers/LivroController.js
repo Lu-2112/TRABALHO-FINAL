@@ -7,6 +7,7 @@ const LivrosModel = require ('../models/LivroModels');
 
 //Importo os validadores
 const { validarNovoLivro, validarAtualizacaoLivro } = require ('../validators/LivroValidator');
+const { validarID } = require('../validators/IDValidator');
 
 //Rotas
 //Cadastro
@@ -17,7 +18,7 @@ router.get('/livros', async (req, res, next) => {
 });
 
 //Leitura por ID
-router .get('/livros/:id', async (req, res, next) => {
+router .get('/livros/:id', validarID, async (req, res, next) => {
  const livroEncontrado = await LivrosModel.findById(req.params.id);
     if(!livroEncontrado) {
         return res.status(404).json({erro: 'Livro não encontrado'});
@@ -33,7 +34,7 @@ router.post('/livros', validarNovoLivro, async (req, res, next) => {
 });
 
 //Atualização
-router.put('/livros/:id', validarAtualizacaoLivro, async (req, res, next) => {
+router.put('/livros/:id', validarID, validarAtualizacaoLivro, async (req, res, next) => {
     const id = req.params.id
     const novosDados = req.body
     const livroAtualizado = await LivrosModel.findByIdAndUpdate(id, novosDados, {new : true}); 
@@ -44,7 +45,7 @@ router.put('/livros/:id', validarAtualizacaoLivro, async (req, res, next) => {
 });
 
 //Exclusão
-router.delete('/livros/:id', async (req, res, next) => {
+router.delete('/livros/:id', validarID, async (req, res, next) => {
     const id = req.params.id
     await LivrosModel.findByIdAndDelete(id);
     res.status(204).json({mensagem: 'Livro excluído com sucesso!'});

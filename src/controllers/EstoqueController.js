@@ -7,6 +7,7 @@ const EstoqueModel = require('../models/EstoqueModels');
 
 // Importo os validadores
 const { validarNovoEstoque, validarAtualizacaoEstoque } = require('../validators/EstoqueValidator');
+const { validarID } = require('../validators/IDValidator');
 
 // Rotas
 // CRUD - Create, Read, Update, Delete
@@ -17,7 +18,7 @@ router.get('/estoque', async (req, res, next) => {
 });
 
 // Leitura por ID
-router.get('/estoque/:id', async (req, res, next) => {
+router.get('/estoque/:id', validarID, async (req, res, next) => {
     const itemEncontrado = await EstoqueModel.findById(req.params.id).populate("livro fornecedor");
     if (!itemEncontrado) {
         return res.status(404).json({ erro: 'Item de estoque não encontrado' });
@@ -33,7 +34,7 @@ router.post('/estoque', validarNovoEstoque, async (req, res, next) => {
 });
 
 // Atualização
-router.put('/estoque/:id', validarAtualizacaoEstoque, async (req, res, next) => {
+router.put('/estoque/:id', validarID, validarAtualizacaoEstoque, async (req, res, next) => {
     const id = req.params.id;
     const novosDados = req.body;
 
@@ -47,7 +48,7 @@ router.put('/estoque/:id', validarAtualizacaoEstoque, async (req, res, next) => 
 });
 
 // Exclusão
-router.delete('/estoque/:id', async (req, res, next) => {
+router.delete('/estoque/:id', validarID, async (req, res, next) => {
     const id = req.params.id;
     await EstoqueModel.findByIdAndDelete(id);
     res.status(204).json({ message: 'Item de estoque excluído com sucesso!' });

@@ -7,6 +7,8 @@ const FornecedorModel = require('../models/FornecedorModel');
 
 // Importo os validadores
 const { validarNovoFornecedor, validarAtualizacaoFornecedor } = require('../validators/FornecedorValidator');
+const { validarNovoEstoque } = require('../validators/EstoqueValidator');
+const { validarID } = require('../validators/IDValidator');
 
 // Rotas
 // Leitura
@@ -16,7 +18,7 @@ router.get('/fornecedores', async (req, res, next) => {
 });
 
 // Leitura por ID
-router.get('/fornecedores/:id', async (req, res, next) => {
+router.get('/fornecedores/:id', validarID, async (req, res, next) => {
     const fornecedorEncontrado = await FornecedorModel.findById(req.params.id);
     if (!fornecedorEncontrado) {
         return res.status(404).json({ erro: 'Fornecedor não encontrado' });
@@ -32,7 +34,7 @@ router.post('/fornecedores', validarNovoFornecedor, async (req, res, next) => {
 });
 
 // Atualização
-router.put('/fornecedores/:id', validarAtualizacaoFornecedor, async (req, res, next) => {
+router.put('/fornecedores/:id', validarID, validarAtualizacaoFornecedor, async (req, res, next) => {
     const id = req.params.id;
     const novosDados = req.body;
 
@@ -46,7 +48,7 @@ router.put('/fornecedores/:id', validarAtualizacaoFornecedor, async (req, res, n
 });
 
 // Exclusão
-router.delete('/fornecedores/:id', async (req, res, next) => {
+router.delete('/fornecedores/:id', validarID, async (req, res, next) => {
     const id = req.params.id
     await FornecedorModel.findByIdAndDelete(id);
     res.status(204).send("Fornecedor excluído com sucesso!");
