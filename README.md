@@ -25,7 +25,7 @@
 A Livraria API é um sistema backend desenvolvido para gerenciar os principais processos de uma livraria.
 O projeto implementa CRUDs completos, relacionamentos entre collections, validação de dados, persistência em MongoDB Atlas e documentação no Postman.
 
-O sistema contempla operações essenciais como cadastro de livros, controle de estoque, registro de fornecedores, além de entidades complementares como clientes, pedidos, categorias, editoras e funcionários.
+O sistema contempla operações essenciais como cadastro de livros, controle de estoque, registro de fornecedores, além de entidades complementares como clientes, pedidos, cargos, vendas, itens, departamento e funcionários.
 O objetivo é aplicar práticas profissionais de desenvolvimento backend, seguindo padrões REST, organização modular e versionamento Git colaborativo.
 
 # Funcionalidades Implementadas
@@ -33,11 +33,10 @@ O objetivo é aplicar práticas profissionais de desenvolvimento backend, seguin
 -Cadastro, listagem, atualização e remoção de livros
 -Cadastro de fornecedores e vínculo com livros
 -Controle de estoque
--Cadastro de clientes com endereço
+-Cadastro de clientes com CPF
 -Criação de pedidos relacionados a clientes
 -Itens de pedido vinculados a produtos (livros)
--Cadastro de categorias e editoras
--Atribuição de funcionários responsáveis por pedidos
+-Cadastro de editoras
 -Validações com Yup e Mongoose
 -Estrutura modular de rotas, controllers, models e validators
 -Documentação completa no Postman
@@ -76,46 +75,29 @@ Exemplos:
 
 /clientes
 /pedidos
-/itensPedido
-/categorias
-/editoras
+/itens
+/estoque
+/fornecedor
 /funcionarios
-/enderecos
+/cargo
+/departamentos
+/vendas
 
 #  Breve Descrição das Collections e Relacionamentos
+
+modificar****
+
 ✔ Livro
-Relacionado com: Fornecedor, Categoria, Editora
+Relacionado com: Fornecedor
 Relacionado com: ItemPedido e Estoque
 
 ✔ Fornecedor
 Fornece um ou vários livros
 
-✔ Estoque
-Relacionado diretamente a um livro
-
-✔ Cliente
-Possui um Endereço
-Relacionado a vários Pedidos
-
-✔ Pedido
-Relacionado a Cliente, ItemPedido e Funcionário
-
-✔ ItemPedido
-Relacionado a Livro
-
-✔ Categoria
-Relacionada com vários livros
-
-✔ Editora
-Relacionada com vários livros
-
-✔ Funcionário
-Registra pedidos
-
-✔ Endereço
-Relacionado a Cliente
 
 # Diagrama de Modelagem
+
+modificar ***
 ![Diagrama do Banco de Dados](./docs/diagrama-livraria.png)
 
 # Instalação, Configuração e Execução
@@ -148,9 +130,9 @@ const MONGO_URI = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?ret
 -validações
 -interações CRUD
 
-🧩 Descrição Detalhada das Contribuições
+# Descrição Detalhada das Contribuições
 Ana Lima
-
+modificar ***
 Desenvolvimento completo das collections:
 
 Livro
