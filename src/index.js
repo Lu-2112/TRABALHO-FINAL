@@ -35,6 +35,9 @@ app.use(DepartamentoController)
 const CargoController = require('./controllers/CargoController')
 app.use(CargoController)
 
+const PedidoController = require('./controllers/PedidoController')
+app.use(PedidoController)
+
 app.listen(3000, () => {
     console.log("Aplicação rodando -> http://localhost:3000")
   })
