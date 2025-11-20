@@ -22,7 +22,7 @@ mongoose.connect(url)
     console.log("Erro ao conectar no banco MongoDB: ", erro)
   })
 
-// rotas
+// Rotas 
 const ClienteController = require('./controllers/ClienteController')
 app.use(ClienteController)
 
@@ -34,6 +34,15 @@ app.use(DepartamentoController)
 
 const CargoController = require('./controllers/CargoController')
 app.use(CargoController)
+
+const FornecedorController = require('./controllers/FornecedorController')
+app.use(FornecedorController)
+
+const LivroController = require('./controllers/LivroController')
+app.use(LivroController)
+
+const EstoqueController = require('./controllers/EstoqueController')
+app.use(EstoqueController)
 
 const PedidoController = require('./controllers/PedidoController')
 app.use(PedidoController)
