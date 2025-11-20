@@ -44,6 +44,9 @@ app.use(LivroController)
 const EstoqueController = require('./controllers/EstoqueController')
 app.use(EstoqueController)
 
+const PedidoController = require('./controllers/PedidoController')
+app.use(PedidoController)
+
 app.listen(3000, () => {
     console.log("Aplicação rodando -> http://localhost:3000")
   })
