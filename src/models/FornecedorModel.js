@@ -1,5 +1,5 @@
 // FORNECEDOR MODEL 
-const mongoose = require('mongoose');
+    const mongoose = require('mongoose');
 
 const FornecedorSchema = new mongoose.Schema({
     nome: { type: String, required: true },
@@ -8,6 +8,7 @@ const FornecedorSchema = new mongoose.Schema({
     telefone: { type: String, required: true },
     endereco: { type: String, required: true },
 
+    // Lista de livros fornecidos:
     livrosFornecidos: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Livro'

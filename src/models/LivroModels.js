@@ -7,6 +7,12 @@ const LivroSchema = new mongoose.Schema({
     ano: { type: Number, required: true },
     genero: { type: String, required: true },
     preco: { type: Number, required: true },
+
+    fornecedor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Fornecedor",
+        required: true
+    }
 });
 
 const LivroModel = mongoose.model('Livro', LivroSchema);
