@@ -9,6 +9,7 @@ const fornecedorCadastro = yup.object({
     endereco: yup.string().required()
 });
 
+
 const fornecedorAtualizacao = yup.object({
     nome: yup.string(),
     email: yup.string().email(),
