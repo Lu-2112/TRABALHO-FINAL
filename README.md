@@ -174,36 +174,36 @@ const MONGO_URI = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?ret
 
 Responsável por entidades essenciais relacionadas à interação com o cliente e ao fluxo de vendas. Suas contribuições incluem:
 
-Cliente: Modelagem, criação da collection, rotas e documentação da entidade responsável pelos dados dos consumidores.
+- Cliente: Modelagem, criação da collection, rotas e documentação da entidade responsável pelos dados dos consumidores.
 
-Venda: Desenvolvimento completo da estrutura de vendas, incluindo relacionamentos com Pedido e Funcionário.
+- Venda: Desenvolvimento completo da estrutura de vendas, incluindo relacionamentos com Pedido e Funcionário.
 
-Item: Implementação da entidade de itens adicionais do sistema, com suas operações CRUD e vínculos com Fornecedor e Pedido.
+- Item: Implementação da entidade de itens adicionais do sistema, com suas operações CRUD e vínculos com Fornecedor e Pedido.
 
-Documentação Postman: Preparação da documentação de testes das rotas no Postman, garantindo clareza e padronização no uso da API.
+- Documentação Postman: Preparação da documentação de testes das rotas no Postman, garantindo clareza e padronização no uso da API.
 
 ### ANA CLARA
 
 Contribuiu com entidades diretamente ligadas ao catálogo e suprimentos da empresa, além de documentação técnica global. Suas tarefas incluíram:
 
-Livro: Criação da collection, atributos, relacionamentos e rotas envolvendo fornecedores.
+- Livro: Criação da collection, atributos, relacionamentos e rotas envolvendo fornecedores.
 
-Fornecedor: Desenvolvimento da entidade responsável pelo cadastro e gerenciamento de fornecedores.
+- Fornecedor: Desenvolvimento da entidade responsável pelo cadastro e gerenciamento de fornecedores.
 
-Estoque: Estruturação completa do controle de estoque, vinculando livros e itens às suas movimentações.
+- Estoque: Estruturação completa do controle de estoque, vinculando livros e itens às suas movimentações.
 
-README: Produção da documentação geral do projeto, organização das seções e padronização da apresentação final.
+- README: Produção da documentação geral do projeto, organização das seções e padronização da apresentação final.
 
 ### LUIZA EDUARDA
 
 Responsável pelas entidades administrativas internas do sistema e por tarefas centrais de fluxo e organização do projeto. Suas contribuições foram:
 
-Funcionário: Implementação da collection, rotas e relacionamentos envolvendo vendas, cargos e departamentos.
+- Funcionário: Implementação da collection, rotas e relacionamentos envolvendo vendas, cargos e departamentos.
 
-Departamento: Criação da estrutura hierárquica administrativa, com atributos e vínculos aos cargos e funcionários.
+- Departamento: Criação da estrutura hierárquica administrativa, com atributos e vínculos aos cargos e funcionários.
 
-Cargo: Desenvolvimento da entidade de cargos, com definição de responsabilidades e relação com funcionários.
+- Cargo: Desenvolvimento da entidade de cargos, com definição de responsabilidades e relação com funcionários.
 
-Pedido: Construção da modelagem completa de pedidos, incluindo relacionamento com Clientes, Itens e Livros.
+- Pedido: Construção da modelagem completa de pedidos, incluindo relacionamento com Clientes, Itens e Livros.
 
-Issues: Organização e acompanhamento das issues do projeto, distribuição de tarefas e controle de andamento no repositório.
+- Issues: Organização e acompanhamento das issues do projeto, distribuição de tarefas e controle de andamento no repositório.
