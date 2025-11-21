@@ -1,6 +1,7 @@
 const yup = require("yup");
 
-const schema = yup.object().strict().shape({
+const schema = yup.object().shape(
+{
   codigo: yup
     .string()
     .required("Código do pedido é obrigatório!")
@@ -15,6 +16,14 @@ const schema = yup.object().strict().shape({
 
   dataPedido: yup
     .date()
+    .transform((value, originalValue) => {
+      if (typeof originalValue === "string") {
+        const parsedDate = new Date(originalValue);
+        return isNaN(parsedDate) ? value : parsedDate;
+      }
+      return value;
+    })
+    .typeError("Data do pedido deve ser uma data válida!")
     .required("Data do pedido é obrigatória!"),
 
   valorTotal: yup
@@ -26,7 +35,7 @@ const schema = yup.object().strict().shape({
     .string()
     .oneOf(["pendente", "pago", "cancelado"], "Status inválido!")
 });
-  
+
 async function validarPedido(req, res, next) {
   try {
     await schema.validate(req.body, { abortEarly: false });
