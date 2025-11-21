@@ -1,9 +1,9 @@
 # Livraria API – Backend REST com Node.js, Express e MongoDB
 
 # Integrantes
-- Ana Clara Lima — 24214290070 — responsável pelos CRUDs de Livro, Estoque e Fornecedor e README.md.
-- Luíza Eduarda Batista - 24214290026 — responsável pelos CRUDs de Funcionário, Departamento, Cargo, Pedido, e Issues do GitHub.
-- Ana Carolina Rosendo - 24214290018 — responsável pelo CRUDs de Cliente, Venda, Item e a Documentação Postman.
+- Ana Clara Lima — responsável pelos CRUDs de Livro, Estoque e Fornecedor e README.md.
+- Luíza Eduarda Batista — responsável pelos CRUDs de Funcionário, Departamento, Cargo, Pedido, e Issues do GitHub.
+- Ana Carolina Rosendo — responsável pelo CRUDs de Cliente, Venda, Item e a Documentação Postman.
 
 # GIT USERS
 - Ana Clara - commit-ana
