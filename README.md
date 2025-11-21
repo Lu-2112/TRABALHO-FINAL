@@ -30,17 +30,17 @@ O objetivo é aplicar práticas profissionais de desenvolvimento backend, seguin
 
 # Funcionalidades Implementadas
 
--Cadastro, listagem, atualização e remoção de livros
--Cadastro de fornecedores e vínculo com livros
--Controle de estoque
--Cadastro de clientes com CPF
--Criação de pedidos relacionados a clientes
--Itens de pedido vinculados a produtos (livros)
--Cadastro de editoras
--Validações com Yup e Mongoose
--Estrutura modular de rotas, controllers, models e validators
--Documentação completa no Postman
--Conexão segura com o MongoDB Atlas via .env
+- Cadastro, listagem, atualização e remoção de livros
+- Cadastro de fornecedores e vínculo com livros
+- Controle de estoque
+- Cadastro de clientes com CPF
+- Criação de pedidos relacionados a clientes
+- Itens de pedido vinculados a produtos (livros)
+- Cadastro de editoras
+- Validações com Yup e Mongoose
+- Estrutura modular de rotas, controllers, models e validators
+- Documentação completa no Postman
+- Conexão segura com o MongoDB Atlas via .env
 
 # Lista de Endpoints com Exemplos
 
