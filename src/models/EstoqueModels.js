@@ -8,12 +8,18 @@ const EstoqueSchema = new mongoose.Schema({
         required: true
     },
 
+    item: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Item',
+        required: true
+    },
+
     fornecedor: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Fornecedor',
         required: true
     },
-
+     
     quantidade: { type: Number, required: true },
     localizacao: { type: String, required: true },
     dataEntrada: { type: Date, required: true }
