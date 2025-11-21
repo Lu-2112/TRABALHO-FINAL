@@ -6,6 +6,7 @@ const LivroSchema = new mongoose.Schema({
     autor: { type: String, required: true },
     ano: { type: Number, required: true },
     genero: { type: String, required: true },
+    editora: { type: String, required: true },
     preco: { type: Number, required: true },
 
     fornecedor: {

@@ -15,8 +15,8 @@ const EstoqueSchema = new mongoose.Schema({
     },
 
     quantidade: { type: Number, required: true },
-    localizacao: { type: String, required: true },
-    dataEntrada: { type: Date, required: true }
+    dataEntrada: { type: String, required: true },
+    dataSaida: { type: Date, required: true }
 });
 
 const EstoqueModel = mongoose.model('Estoque', EstoqueSchema);
