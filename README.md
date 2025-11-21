@@ -90,34 +90,33 @@ A seguir está uma descrição das principais collections e como elas se relacio
 Armazena informações sobre livros disponíveis para venda.
 Cada livro possui:
 
--Dados bibliográficos (título, autor, editora, gênero etc.)
+- Dados bibliográficos (título, autor, editora, gênero etc.)
 
--Valor
+- Valor
 
--ID do Fornecedor → relacionamento com a collection Fornecedor
+- ID do Fornecedor → relacionamento com a collection Fornecedor
 
 ### Fornecedor
 Contém informações dos fornecedores de livros e itens.
 Relacionamentos:
 
--Um fornecedor pode fornecer vários livros.
+- Um fornecedor pode fornecer vários livros.
 
--Um fornecedor pode fornecer vários itens.
+- Um fornecedor pode fornecer vários itens.
 
 ### Item
 Representa itens genéricos no estoque (além dos livros).
 Atributos:
 
--Nome do item
+- Nome do item
 
--Valor
+- Valor
 
--ID do Fornecedor
+- ID do Fornecedor
 
 Usado em pedidos e estoque.
 
 E assim sucessivamente em todas as outras entidades.
-
 
 ### Relacionamentos
 Fornecedor → Livro / Item (1:N)
