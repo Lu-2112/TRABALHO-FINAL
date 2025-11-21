@@ -84,20 +84,60 @@ Exemplos:
 /vendas
 
 #  Breve Descrição das Collections e Relacionamentos
+A seguir está uma descrição das principais collections e como elas se relacionam entre si.
 
-modificar****
+### Livro
+Armazena informações sobre livros disponíveis para venda.
+Cada livro possui:
 
-✔ Livro
-Relacionado com: Fornecedor
-Relacionado com: ItemPedido e Estoque
+-Dados bibliográficos (título, autor, editora, gênero etc.)
 
-✔ Fornecedor
-Fornece um ou vários livros
+-Valor
 
+-ID do Fornecedor → relacionamento com a collection Fornecedor
+
+### Fornecedor
+Contém informações dos fornecedores de livros e itens.
+Relacionamentos:
+
+-Um fornecedor pode fornecer vários livros.
+
+-Um fornecedor pode fornecer vários itens.
+
+### Item
+Representa itens genéricos no estoque (além dos livros).
+Atributos:
+
+-Nome do item
+
+-Valor
+
+-ID do Fornecedor
+
+Usado em pedidos e estoque.
+
+E assim sucessivamente em todas as outras entidades.
+
+
+### Relacionamentos
+Fornecedor → Livro / Item (1:N)
+
+Livro / Item → Estoque (1:N)
+
+Cliente → Pedido (1:N)
+
+Pedido → Venda (1:1)
+
+Funcionario → Venda (1:N)
+
+Departamento → Funcionario (1:N)
+
+Cargo → Funcionario (1:N)
+
+Departamento → Cargo (1:N)
 
 # Diagrama de Modelagem
 
-modificar ***
 ![Diagrama do Banco de Dados](./docs/diagrama-livraria.png)
 
 # Instalação, Configuração e Execução
@@ -131,41 +171,40 @@ const MONGO_URI = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?ret
 -interações CRUD
 
 # Descrição Detalhada das Contribuições
-Ana Lima
-modificar ***
-Desenvolvimento completo das collections:
+### ANA CAROLINA
 
-Livro
-Fornecedor
-Estoque
+Responsável por entidades essenciais relacionadas à interação com o cliente e ao fluxo de vendas. Suas contribuições incluem:
 
-Implementação dos CRUDs e rotas correspondentes
+Cliente: Modelagem, criação da collection, rotas e documentação da entidade responsável pelos dados dos consumidores.
 
-Criação de validações com Yup e Mongoose
+Venda: Desenvolvimento completo da estrutura de vendas, incluindo relacionamentos com Pedido e Funcionário.
 
-Organização das pastas de rotas, controllers, validators e models
+Item: Implementação da entidade de itens adicionais do sistema, com suas operações CRUD e vínculos com Fornecedor e Pedido.
 
-Documentação de endpoints no Postman
+Documentação Postman: Preparação da documentação de testes das rotas no Postman, garantindo clareza e padronização no uso da API.
 
-Parte principal do README.md
+### ANA CLARA
 
-Resolução de issues:
+Contribuiu com entidades diretamente ligadas ao catálogo e suprimentos da empresa, além de documentação técnica global. Suas tarefas incluíram:
 
-CRUD Livro
+Livro: Criação da collection, atributos, relacionamentos e rotas envolvendo fornecedores.
 
-CRUD Fornecedor
+Fornecedor: Desenvolvimento da entidade responsável pelo cadastro e gerenciamento de fornecedores.
 
-CRUD Estoque
+Estoque: Estruturação completa do controle de estoque, vinculando livros e itens às suas movimentações.
 
-Padronização das rotas
+README: Produção da documentação geral do projeto, organização das seções e padronização da apresentação final.
 
-Conexão com o MongoDB Atlas
+### LUIZA EDUARDA
 
-Membro 2
+Responsável pelas entidades administrativas internas do sistema e por tarefas centrais de fluxo e organização do projeto. Suas contribuições foram:
 
-(preencher depois)
+Funcionário: Implementação da collection, rotas e relacionamentos envolvendo vendas, cargos e departamentos.
 
-Membro 3
+Departamento: Criação da estrutura hierárquica administrativa, com atributos e vínculos aos cargos e funcionários.
 
-(preencher depois)
+Cargo: Desenvolvimento da entidade de cargos, com definição de responsabilidades e relação com funcionários.
 
+Pedido: Construção da modelagem completa de pedidos, incluindo relacionamento com Clientes, Itens e Livros.
+
+Issues: Organização e acompanhamento das issues do projeto, distribuição de tarefas e controle de andamento no repositório.
