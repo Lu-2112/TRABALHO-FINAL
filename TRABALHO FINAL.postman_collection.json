@@ -1,0 +1,1050 @@
+{
+	"info": {
+		"_postman_id": "1fcf3597-973f-4be0-af34-340b5b168db9",
+		"name": "TRABALHO FINAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47434596",
+		"_collection_link": "https://carolinaarosendo-7594540.postman.co/workspace/Carolina-Rosendo's-Workspace~c572b6f2-cd19-4b21-867a-805e37f6d9c7/collection/47434596-1fcf3597-973f-4be0-af34-340b5b168db9?action=share&source=collection_link&creator=47434596"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Juliana Pereira Costa\",\r\n  \"cpf\": \"456.789.123-00\",\r\n  \"email\": \"juliana.costa@example.com\",\r\n  \"dataNascimento\": \"2000-12-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"Ana Maria\",\r\n        \"cpf\": \"123.456.789-00\",\r\n        \"email\": \"ana.silva@example.com\",\r\n        \"dataNascimento\": \"1995-06-12T00:00:00.000Z\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes/691bd3cd830a9e777419eb96",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"691bd3cd830a9e777419eb96"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Juliana Pereira Costa\",\r\n  \"cpf\": \"456.789.123-00\",\r\n  \"email\": \"juliana.costa@example.com\",\r\n  \"dataNascimento\": \"2000-12-05\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes/691bd3d6830a9e777419eb98",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"691bd3d6830a9e777419eb98"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendas",
+			"item": [
+				{
+					"name": "Exibir",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Juliana Pereira Costa\",\r\n  \"cpf\": \"456.789.123-00\",\r\n  \"email\": \"juliana.costa@example.com\",\r\n  \"dataNascimento\": \"2000-12-05\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/vendas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataVenda\": \"2025-01-03\",\r\n  \"valor\": 15.50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/vendas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"valor\": 59.50,\r\n        \"dataVenda\": \"2024-05-12T00:00:00.000Z\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/vendas/691cfa915fd1fd8aba66a75d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vendas",
+								"691cfa915fd1fd8aba66a75d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/vendas/691cfab35fd1fd8aba66a761",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vendas",
+								"691cfab35fd1fd8aba66a761"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Itens",
+			"item": [
+				{
+					"name": "Exibir",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/itens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"itens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/itens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"itens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nomeDoItem\": \"Caderno Spiral\",\r\n        \"valor\": 13.00\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/itens/691d01613a48b6865a60b1c1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"itens",
+								"691d01613a48b6865a60b1c1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/itens/691d01613a48b6865a60b1c1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"itens",
+								"691d01613a48b6865a60b1c1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cargo",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cargos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cargos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Designer UX\",\r\n    \"descricao\": \"Cria experiências intuitivas e acessíveis para usuários.\",\r\n    \"salario\": 4800.00,\r\n    \"departamento\": \"6920ec1df58bdaeff3135792\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cargos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cargos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/cargos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cargos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/cargos/6920ee51a83de11eb0ff1e4f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cargos",
+								"6920ee51a83de11eb0ff1e4f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Departamento",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/departamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Marketing\",\r\n    \"descricao\": \"Planeja campanhas, comunicação e posicionamento da marca.\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/departamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"nome\": \"Recursos Humanos\",\r\n        \"descricao\": \"Gerencia recrutamento, seleção e bem-estar dos colaboradores da empresa.\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/departamentos/6920ec13f58",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"departamentos",
+								"6920ec13f58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/departamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estoque",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/estoque",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"estoque"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/estoque",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"estoque"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/estoque",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"estoque"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/estoque",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"estoque"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fornecedor",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/fornecedores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fornecedores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/fornecedores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fornecedores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/fornecedores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fornecedores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/fornecedores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fornecedores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funcionario",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Camila Duarte\",\r\n    \"cpf\": \"45678912355\",\r\n    \"email\": \"camila.duarte@example.com\",\r\n    \"telefone\": \"31998765432\",\r\n    \"dataNascimento\": \"1996-10-09\",\r\n    \"dataContratacao\": \"2024-02-18\",\r\n    \"genero\": \"Feminino\",\r\n    \"cargo\": \"6920eeaa4e82a625d2471a4f\",\r\n    \"departamento\": \"6920ec13f58bdaeff3135790\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"nome\": \"Larissa Monteiro\",\r\n        \"cpf\": \"12345678910\",\r\n        \"email\": \"larissa.monteiro@example.com\",\r\n        \"telefone\": \"11987654321\",\r\n        \"dataNascimento\": \"1994-03-22T00:00:00.000Z\",\r\n        \"dataContratacao\": \"2023-11-10T00:00:00.000Z\",\r\n        \"genero\": \"Feminino\",\r\n        \"cargo\": \"6920f02e4e82a625d2471a57\",\r\n        \"departamento\": \"6920ec23f58bdaeff3135794\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/funcionarios/6920f0544e82a625d2471a5a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios",
+								"6920f0544e82a625d2471a5a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Livro",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeDoItem\": \"Teclado Gamer\",\r\n  \"valor\": 149.99\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
