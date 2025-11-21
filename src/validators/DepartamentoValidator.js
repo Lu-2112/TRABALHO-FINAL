@@ -7,8 +7,8 @@ const schema = yup.object().shape(
         .required("Nome é obrigatório!"),
         descricao: yup.string()
         .min(3, "A descrição precisa de pelo menos 3 caracteres!")
-        .max(50, "A descrição precisa de no máximo 50 caracteres")
-        .required("Descrição é obrigatória!"),
+        .max(100, "A descrição precisa de no máximo 100 caracteres")
+        .required("Descrição é obrigatória!")
     }
 )
 async function validarDepartamento(req,res,next) {

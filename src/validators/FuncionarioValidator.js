@@ -9,7 +9,20 @@ const schema = yup.object().shape(
         dataNascimento: yup.date().required("Data de Nascimento é obrigatório!"),
         dataContratacao: yup.date().required("Data de Contratação é obrigatório!"),
         genero: yup.string().required("Genero é obrigatório!"),
-       
+        cargo: yup.string()
+        .required("ID do cargo é obrigatório!")
+        .test(
+            'id-validator',
+            'ID do cargo é inválido',
+                value => mongoose.Types.ObjectId.isValid(value)
+        ),
+        departamento: yup.string()
+        .required("ID do departamento é obrigatório!")
+        .test(
+            'id-validator',
+            'ID do departamento é inválido',
+                value => mongoose.Types.ObjectId.isValid(value)
+        ),
     }
 )
 async function validarFuncionario(req,res,next) {

@@ -5,9 +5,21 @@ const schema = yup.object().shape(
     dataVenda: yup.date().required("Data da venda é obrigatória!"),
     valor: yup.number()
     .required("Valor é obrigatório")
-    .min(1.99, "Valor minimo é de 1.99")
-    //relacionamento: id pedido
-    //relacionamento: id funcionario
+    .min(1.99, "Valor minimo é de 1.99"),
+    pedido: yup.string()
+      .required("ID do pedido é obrigatório!")
+      .test(
+        'id-validator',
+        'ID do pedido é inválido',
+            value => mongoose.Types.ObjectId.isValid(value)),
+    funcionario: yup.string()
+    .required("ID do funcionário é obrigatório!")
+    .test(
+      'id-validator',
+      'ID do funcionário é inválido',
+          value => mongoose.Types.ObjectId.isValid(value)
+
+    ),
   }
 )
 

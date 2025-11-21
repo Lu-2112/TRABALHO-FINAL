@@ -8,8 +8,14 @@ const schema = yup.object().shape(
     .required("Nome do Item é obrigatório!"),
     valor: yup.number()
     .required("Valor é obrigatório")
-    .min(1.99, "Valor minimo é de 1.99")
-    // relacionamento: id fornecedor
+    .min(1.99, "Valor minimo é de 1.99"),
+    fornecedor: yup.string()
+      .required("ID do fornecedor é obrigatório!")
+      .test(
+        'id-validator',
+        'ID do fornecedor é inválido',
+            value => mongoose.Types.ObjectId.isValid(value)
+      ),
   }
 )
 

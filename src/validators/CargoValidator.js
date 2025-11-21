@@ -1,4 +1,6 @@
 const yup = require('yup')
+const mongoose = require('mongoose')
+
 
 const schema = yup.object().shape(
   {
@@ -6,7 +8,14 @@ const schema = yup.object().shape(
     descricao: yup.string().required("descricao é obrigatório"),
     salario: yup.number()
       .required("salario é obrigatório")
-      .min(1518.00, "salario minimo é de 1518.00")
+      .min(1518.00, "salario minimo é de 1518.00"),
+    departamento: yup.string()
+      .required("ID do departamento é obrigatório!")
+      .test(
+        'id-validator',
+        'ID do departamento é inválido',
+            value => mongoose.Types.ObjectId.isValid(value)
+      ),
   }
 )
 

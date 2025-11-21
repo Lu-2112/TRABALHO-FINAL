@@ -16,7 +16,9 @@ const schema = new mongoose.Schema(
             cidade: String,
             bairro: String,
             uf: String,
-        } 
+        },
+        cargo: {type: mongoose.Schema.Types.ObjectId, ref: 'Cargo', required: true},
+        departamento: {type: mongoose.Schema.Types.ObjectId, ref: 'Departamento', required: true},
     }
 )
 const FuncionarioModel = mongoose.model('Funcionarios', schema)

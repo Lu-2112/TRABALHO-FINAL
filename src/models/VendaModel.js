@@ -4,8 +4,8 @@ const schema = new mongoose.Schema(
   {
     valor: { type: Number, required: true },
     dataVenda: { type: Date, required: true },
-    //relacionamento: id pedido
-    //relacionamento: id funcionario
+    pedido: { type: mongoose.Schema.Types.ObjectId, ref: 'Pedido', required: true },
+    funcionario: { type: mongoose.Schema.Types.ObjectId, ref: 'Funcionario', required: true }
   }
 )
 

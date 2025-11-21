@@ -3,6 +3,7 @@ const router = express.Router()
 
 const DepartamentoModel = require('../models/DepartamentoModels')
 const { validarDepartamento} = require('../validators/DepartamentoValidator')
+const {validarID} = require('../validators/IDValidator')
 
 // CRUD
 // listar
@@ -11,7 +12,7 @@ router.get('/departamentos', async(req,res,next) => {
     res.json(departamentos)
 })
 // buscar por id
-router.get('/departamentos/:id', async(req,res,next) => {
+router.get('/departamentos/:id',validarID, async(req,res,next) => {
     const departamentoEncontrado = await DepartamentoModel.findById(req.params.id)
     if(!departamentoEncontrado){
         return res.status(404).json ({erro: "Não encontrado"})
@@ -24,7 +25,7 @@ router.post('/departamentos', validarDepartamento, async(req,res,next) => {
     res.status(201).json(departamentoCriado)
 })
 // atualizar
-router.put('/departamentos/:id', validarDepartamento, async (req,res,next) => {
+router.put('/departamentos/:id', validarID, validarDepartamento, async (req,res,next) => {
     const id = req.params.id
     const dados = req.body
     const departamentoAtualizado = await DepartamentoModel.findByIdAndUpdate(id,dados, {new: true})
