@@ -137,7 +137,7 @@ Departamento → Cargo (1:N)
 
 # Diagrama de Modelagem
 
-![Diagrama do Banco de Dados](./docs/diagrama-livraria.png)
+![Diagrama do Banco de Dados](./docs/Diagrama.png)
 
 # Instalação, Configuração e Execução
 - 1️º Clonar o repositório
